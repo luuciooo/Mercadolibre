@@ -2,7 +2,7 @@
 
 .banner {
     display: flex;
-    height: 25vh;
+    height: 15vh;
     padding: 0px;
 }
 
@@ -31,7 +31,6 @@ main img {
 
 .titulares {
     font-size: 24px;
-    
 }
 
 .precios {
@@ -129,7 +128,7 @@ footer {
 main h2 {
     color: #666;
     background-color: #ebebeb;
-    padding-bottom: 4vh;
+    padding-bottom: 2vh;
     width: 90%;
     margin: auto;
 }
@@ -206,6 +205,9 @@ main article i {
 .navbar {
     display: none;
 }
+#segundo { 
+    margin-top: 10px;
+}
 
 @media (min-width: 361px) {
     main h3 {
@@ -215,7 +217,47 @@ main article i {
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
     .navbar {
-        display: block;
+        display:block;
+        padding-top: 20px;
+    }
+    .navbar nav {
+        display: flex;
+    }
+    #menu1{
+        width: 50%;
+        display: flex;
+    }
+    .izquierda {
+        justify-content: flex-start;
+        padding: 0px 0px 10px 10px !important;
+        align-items: center;
+        padding-bottom: 10px !important;
+    }
+    .izquierda li{
+        width: 20%;
+        font-size: 0.80em;
+        margin: 0;
+    }
+    #ofertas {
+        text-align: center;
+    }
+    #tienda {
+        width: 32%;
+        margin: 0px;
+    }
+    .derecha {
+        justify-content: flex-end;
+        padding: 10px 10px 0px 0px;
+        padding-bottom: 10px !important;
+        padding-top: 0px !important;
+    }
+    #ingresa {
+        width: 23%;
+    }
+    .derecha li{
+        width: 30%;
+        font-size: 0.80em;
+        margin: 0;
     }
     .burger-menu {
         display: none;
@@ -245,6 +287,34 @@ main article i {
     main article i {
         top: 60%;
         left: 80%;
+    }
+    .logo {
+        width: 30%;
+    }
+    .itemsU {
+        width: 30%;
+    }
+    .itemsI{
+        width: 40%;
+        font-size: 0.75em;
+        text-align: center;
+        align-items: center;
+        margin: auto;
+        padding: 0px;
+    }
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    footer section {
+        width: 33%;
+        margin: 0px;
+        padding-top: 20px;
+    }
+    .cop {
+        width: 100%;
+        background-color: #ebebeb;
     }
 }
 
