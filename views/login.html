@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,6 +11,7 @@
     <script src="https://kit.fontawesome.com/b2124379f6.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/styleR.css">
 </head>
+
 <body>
     <header>
         <div class="headerU">
@@ -20,14 +22,16 @@
             </div>
             <div class="itemsU">
 
+                <form action="/" method="get">
                     <input type="search" name="busquedamusica" placeholder="Buscar marcas, productos">
 
                     <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
 
             </div>
 
             <div class="itemsI">
-                    <p><i class="fa-solid fa-hand-holding-dollar"></i> Comprá en cuotas y sin tarjeta de crédito</p>
+                <p><i class="fa-solid fa-hand-holding-dollar"></i> Comprá en cuotas y sin tarjeta de crédito</p>
             </div>
         </div>
         <div class="navbar">
@@ -41,7 +45,8 @@
                 <ul id="menu1" class="derecha">
                     <li><a href="http://localhost:3030/register"><i class="fa-solid fa-users-viewfinder"></i> Crea tu
                             Cuenta</a></li>
-                    <li id="ingresa"><a href="http://localhost:3030/login"><i class="fa-solid fa-arrow-right-to-bracket"></i> Ingresa</a></li>
+                    <li id="ingresa"><a href="http://localhost:3030/login"><i
+                                class="fa-solid fa-arrow-right-to-bracket"></i> Ingresa</a></li>
                     <li><a href=""><i class="fa-solid fa-basket-shopping"></i> Mis Compras</a></li>
                 </ul>
             </nav>
@@ -57,7 +62,11 @@
     </header>
 
     <main>
-        
+        <form action="/" method="get">
+            <label for="Nombre de usuario">Nombre de usuario</label><input type="text" name="Nombre de usuario">
+            <label for="Contrasenia">Contraseña</label><input type="password" name="Contrasenia">
+            <input type="submit" class="boton" id="login" value="Login" name="">
+        </form>
     </main>
 
     <footer>
@@ -83,6 +92,7 @@
             <p>Copyright © 1999-2020 MercadoLiebre S.R.L.</p>
         </section>
     </footer>
-</footer>
+    </footer>
 </body>
+
 </html>

@@ -16,7 +16,7 @@ main form input {
     height: 40px;
     margin-bottom: 10px;
     border-radius: 10px;
-    border: 1px solid grey;
+    border: 1px solid #666;
 }
 
 main form label {
@@ -30,4 +30,32 @@ main form label {
 }
 .renglon {
     width: 100%;
+}
+
+.chicos {
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.boton {
+    border-radius: 20px;
+    border-color: #03264C;
+    background-color: #03264C;
+    color: #ebebeb;
+}
+
+#foto{
+    border: 0px;
+}
+
+#login {
+    width: 100%;
+    background-color: #1259c3;
+    transition-property: background-color;
+    transition-duration: 1s;
+}
+
+#login:hover {
+    background-color: #0022AA;
 }

@@ -1,5 +1,12 @@
 
-
+/*
+Amarillo: #EAC926;
+Azul: #03264C;
+Celeste: #1259c3;
+Gris oscuro: #666;
+Gris claro: #ebebeb;
+Verde: #39b54a;
+*/
 .banner {
     display: flex;
     height: 15vh;
@@ -27,6 +34,7 @@ main img {
     font-family: 'Roboto', sans-serif;
     margin : 0px;
     box-sizing: border-box;
+    color: #03264C;
 }
 
 .titulares {
@@ -51,7 +59,7 @@ main img {
 
 main h3 {
     font-size: 1em;
-    color: #8c8c8c;
+    color: #666;
     display: none;
     padding-top: 20px;
     width: 100%;
@@ -75,7 +83,7 @@ header div {
 
 
 .menu {
-    background-color: #1259c3;;
+    background-color: #1259c3;
     border: 1px solid white;
     border-radius: 4px;
     color: white;
@@ -116,9 +124,13 @@ footer section {
     padding-left: 1vh;
 }
 
+footer section h3{
+    font-size: 24px;
+}
+
 footer section i {
     color: #1259c3;
-    font-size: 10vh;
+    font-size: 2em;
     padding: 2vh;
 }
 footer {
@@ -182,6 +194,9 @@ main article i {
     display: flex;
     align-items: center;
 }
+.itemsU form {
+    display: flex;
+}
 .itemsU input{
     width: 85%;
     border: 1px solid #ebebeb;
@@ -209,12 +224,29 @@ main article i {
     margin-top: 10px;
 }
 
+@keyframes rotacion {
+    20%{transform:rotate(90deg)}
+    40%{transform:rotate(180deg)}
+    60%{transform:rotate(270deg)}
+    80%{transform:rotate(360deg)}
+    100%{transform:rotate(-90deg)}
+}
+
+main article:hover h3{
+    display: block;
+}
+main article:hover i {
+    animation: rotacion 2.5s 1;
+    transform: rotate(-90deg);
+}
+main article:hover{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
 @media (min-width: 361px) {
-    main h3 {
-        display:block;
-    }
+    
     main article {
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        box-shadow: 0px 0px 10px #666;
     }
     .navbar {
         display:block;
@@ -302,23 +334,14 @@ main article i {
         margin: auto;
         padding: 0px;
     }
-    footer {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    footer section {
-        width: 33%;
-        margin: 0px;
-        padding-top: 20px;
-    }
-    .cop {
-        width: 100%;
-        background-color: #ebebeb;
+    
+    .banner {
+        height: 25vh;
     }
 }
 
 @media (min-width: 769px) {
+    
     .titulares {
         display: flex;
         flex-wrap: wrap;
@@ -341,5 +364,22 @@ main article i {
     main article i {
         top: 55%;
         left: 80%;
+    }
+    .banner {
+        height: 30vh;
+    }
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    footer section {
+        width: 33%;
+        margin: 0px;
+        padding-top: 20px;
+    }
+    .cop {
+        width: 100%;
+        background-color: #ebebeb;
     }
 }

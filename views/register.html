@@ -22,9 +22,11 @@
             </div>
             <div class="itemsU">
 
-                <input type="search" name="busquedamusica" placeholder="Buscar marcas, productos">
+                <form action="/" method="get">
+                    <input type="search" name="busquedamusica" placeholder="Buscar marcas, productos">
 
-                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
 
             </div>
 
@@ -43,7 +45,8 @@
                 <ul id="menu1" class="derecha">
                     <li><a href="http://localhost:3030/register"><i class="fa-solid fa-users-viewfinder"></i> Crea tu
                             Cuenta</a></li>
-                    <li id="ingresa"><a href="http://localhost:3030/login"><i class="fa-solid fa-arrow-right-to-bracket"></i> Ingresa</a></li>
+                    <li id="ingresa"><a href="http://localhost:3030/login"><i
+                                class="fa-solid fa-arrow-right-to-bracket"></i> Ingresa</a></li>
                     <li><a href=""><i class="fa-solid fa-basket-shopping"></i> Mis Compras</a></li>
                 </ul>
             </nav>
@@ -59,25 +62,54 @@
     </header>
 
     <main>
-        <form action="">
-            <label for="Nombre y apellido">Nombre y apellido</label><input type="text" name="Nombre y apellido">
-            <label for="Nombre de usuario">Nombre de usuario</label><input type="text" name="Nombre de usuario">
+        <form id="formulario" action="">
+            <label for="Nombre">Nombre</label><input type="text" id="nombre" name="Nombre">
+            <label for="apellido">Apellido</label><input type="text" id="apellido"name="apellido">
+            <label for="Nombre de usuario">Nombre de usuario</label><input id="nombreU" type="text" name="Nombre de usuario">
             <label for="Fecha de Nacimiento">Fecha de Nacimiento</label><input type="date" name="Fecha de Nacimiento">
             <label for="Domicilio">Domicilio</label><input type="text" name="Domicilio">
             <label for="Perfil del usuario" class="renglon">Perfil del usuario</label>
-            <input type="radio" name="Perfil del usuario" value="Venta" class="chicos"><label for="Perfil del usuario">Venta</label><input type="radio" name="Perfil del usuario"  class="chicos" value="Compra"><label for="Perfil del usuario">Compra</label>
+            <input type="radio" name="Perfil del usuario" value="Venta"><label for="Perfil del usuario"
+                class="chicos">Venta</label><input type="radio" name="Perfil del usuario" value="Compra"><label
+                for="Perfil del usuario" class="chicos">Compra</label>
             <label for="Categorías de interés" class="renglon">Categorías de interés</label>
-            <input type="checkbox" name="Categorías de interés" class="chicos" value="Electro"><label for="Categorías de interés">Electro</label>
-            <input type="checkbox" name="Categorías de interés" class="chicos" value="Moda"><label for="Categorías de interés">Moda</label>
-            <input type="checkbox" name="Categorías de interés" class="chicos" value="Hogar"><label for="Categorías de interés">Hogar</label>
-            <input type="checkbox" name="Categorías de interés" class="chicos" value="Jugueteria"><label for="Categorías de interés">Jugueteria</label>
-            <input type="checkbox" name="Categorías de interés" class="chicos" value="Vida sana"><label for="Categorías de interés">Vida sana</label>
-            <label for="Foto">Foto de Perfil</label><input type="file" name="Foto">
-            <label for="Contrasenia">Contraseña</label><input type="text" name="Contrasenia">
-            <label for="NContrasenia">Repetir Contraseña</label><input type="text" name="NContrasenia">
-            <input type="reset" name="">
-            <input type="submit" name="">
+            <input type="checkbox" name="Categorías de interés" value="Electro"><label for="Categorías de interés"
+                class="chicos">Electro</label>
+            <input type="checkbox" name="Categorías de interés" value="Moda"><label for="Categorías de interés"
+                class="chicos">Moda</label>
+            <input type="checkbox" name="Categorías de interés" value="Hogar"><label for="Categorías de interés"
+                class="chicos">Hogar</label>
+            <input type="checkbox" name="Categorías de interés" value="Jugueteria"><label for="Categorías de interés"
+                class="chicos">Jugueteria</label>
+            <input type="checkbox" name="Categorías de interés" value="Vida sana"><label for="Categorías de interés"
+                class="chicos">Vida sana</label>
+            <label for="Foto">Foto de Perfil</label><input type="file" id="foto" name="Foto">
+            <label for="Contrasenia">Contraseña</label><input type="password" name="Contrasenia">
+            <label for="NContrasenia">Repetir Contraseña</label><input type="password" name="NContrasenia">
+            <input type="reset" class="boton" name="">
+            <input type="submit" class="boton" name="">
         </form>
+
+        <script>
+
+            const formulario = document.getElementById('formulario');
+
+            // Agregamos un escucha de eventos al formulario, que ejecute una función cuando el evento sea ejecutado
+
+            formulario.addEventListener('submit', function (e) {
+                e.preventDefault();
+                console.log(formulario.nombre.value)
+                if (formulario.nombre.value.length < 2) {
+                    alert('No se ingresó un nombre válido!')
+                }
+                else if (formulario.apellido.value.length < 2) {
+                    alert('No se ingresó un apellido válido!')
+                }
+                else if (formulario.nombreU.value.length < 2) {
+                    alert('No se ingresó un nombre de Usuario válido!')
+                }
+            });
+        </script>
     </main>
 
     <footer>
