@@ -196,6 +196,7 @@ main article i {
 }
 .itemsU form {
     display: flex;
+    width: 100%;
 }
 .itemsU input{
     width: 85%;
@@ -242,7 +243,14 @@ main article:hover i {
 main article:hover{
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
-
+@keyframes clikeame {
+    50%{transform: translateY(5px);}
+    100%{transform: translateY(-5px);}
+}
+footer section:hover i{
+    color: #39b54a;
+    animation: clikeame 0.5s infinite;
+}
 @media (min-width: 361px) {
     
     main article {

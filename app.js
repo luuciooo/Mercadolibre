@@ -2,6 +2,8 @@ const express = require('express');
 
 const app = express();
 
+const dotenv = require(dotenv).config();
+
 const path = require('path');
 
 app.use(express.static('public'))
@@ -19,6 +21,6 @@ app.get('/login', (req, res) => {
 }); 
 
 
-app.listen(3030, () =>
+app.listen(process.env.PORT, () =>
 console.log("Levantando un servidor con Express")
 );
